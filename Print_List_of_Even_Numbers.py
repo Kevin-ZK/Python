@@ -1,19 +1,9 @@
 # INPUT NUMBER OF EVEN NUMBERS
-def print_error_messages():
-  print("Invalid number, please enter a Non-negative number!")
-  exit()
 
-
-try:
-  n=int(input('Amount: '))
-except ValueError:
-  print_error_messages()
-
-start=0
+n = int(input("Enter the limit : "))  # user input
 
 if n < 0:
-  print_error_messages()
-
-for i in range(n):
-  print(start)
-  start+=2
+    print("Invalid number, please enter a Non-negative number!")
+else:    
+    even_list = [i for i in range(0,n+1,2)]         # creating string with number "i"
+    print(even_list)                                # in range from 0 till "n" with step 2
